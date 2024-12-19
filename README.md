@@ -2,6 +2,9 @@
 
 CTkDatePicker is a custom date picker widget built using the CustomTkinter library. It provides a user-friendly interface for selecting dates, with both a text entry and a calendar popup for easy date selection.
 
+![grafik](https://github.com/user-attachments/assets/d51430c3-aea1-49bf-b790-550c58902773)
+
+
 ## Features
 
 - **Customizable Date Format**: Set the date format to display in the date entry.
