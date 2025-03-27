@@ -53,6 +53,7 @@ class CTkDatePicker(ctk.CTkFrame):
         """
         import locale
         locale.setlocale(locale.LC_ALL, localization)
+        locale.setlocale(locale.LC_NUMERIC, "C")
 
     def open_calendar(self):
         """
