@@ -36,6 +36,8 @@ def main():
     root.geometry("400x300")
     
     date_picker = CTkDatePicker(root)
+    date_picker.set_allow_change_month(False)
+    date_picker.set_change_months("sub", 5)
     date_picker.pack(pady=20)
 
     def print_date():
@@ -58,6 +60,12 @@ if __name__ == "__main__":
   date_picker.set_date_format("%d-%m-%Y")
   ```
 
+- **Language**: You can set the language for days and months using the `set_localization` method.
+
+  ```python
+  date_picker.set_localization("en_EN")
+  ```
+
 - **Allow Manual Input**: Enable or disable manual date input using the `set_allow_manual_input` method.
 
   ```python
@@ -72,6 +80,12 @@ if __name__ == "__main__":
 - **Description**: Set the date format to be used in the date entry.
 - **Parameters**: 
   - `date_format` (str): The desired date format string, e.g., "%m/%d/%Y".
+
+### `set_localization(localization)`
+
+- **Description**: Set the localization for month and day names.
+- **Parameters**: 
+  - `localization` (str): The desired localization string, e.g., "en_EN".
 
 ### `open_calendar()`
 
@@ -106,6 +120,19 @@ if __name__ == "__main__":
 - **Description**: Enable or disable manual date input.
 - **Parameters**: 
   - `value` (bool): If True, manual input in the date entry is allowed; otherwise, it is disabled.
+
+### `set_allow_change_month(value)`
+
+- **Description**: Enable or disable change month.
+- **Parameters**: 
+  - `value` (bool): If False, user cannot change month in the calendar.
+
+### `set_change_months(value)`
+
+- **Description**: Add or subract number of months when opening the calendar.
+- **Parameters**: 
+  - `add_or_sub` (str): Either "add" or "sub".
+  - `value` (int): Number of months.
 
 ## Contributing
 
